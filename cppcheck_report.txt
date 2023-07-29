@@ -1,0 +1,614 @@
+libhttpd/api.c:429:13: style: Condition 'inHeaders' is always true [knownConditionTrueFalse]
+        if (inHeaders) {
+            ^
+libhttpd/api.c:387:17: note: Assignment 'inHeaders=1', assigned value is 1
+    inHeaders = 1;
+                ^
+libhttpd/api.c:395:19: note: Assuming condition is false
+        if (count == 1) {
+                  ^
+libhttpd/api.c:429:13: note: Condition 'inHeaders' is always true
+        if (inHeaders) {
+            ^
+libhttpd/api.c:877:10: style: The scope of the variable 'buffer' can be reduced. [variableScope]
+    char buffer[255];
+         ^
+libhttpd/api.c:800:14: style: Local variable 'dir' shadows outer variable [shadowVariable]
+    httpDir *dir;
+             ^
+libhttpd/api.c:535:7: note: Shadowed declaration
+char *dir, *name;
+      ^
+libhttpd/api.c:800:14: note: Shadow variable
+    httpDir *dir;
+             ^
+libhttpd/api.c:202:15: style: Unused variable: opt [unusedVariable]
+    int sock, opt;
+              ^
+libhttpd/api.c:267:0: information: Skipping configuration 'SO_REUSEADDR' since the value of 'SO_REUSEADDR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    if (setsockopt(sock, SOL_SOCKET, SO_REUSEADDR, (char *)&opt, sizeof(int)) < 0) {
+^
+libhttpd/httpd.h:157:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int httpdAddCContent __ANSI_PROTO((httpd *, char *, char *, int, int (*)(), void (*)()));
+^
+libhttpd/httpd.h:158:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int httpdAddFileContent __ANSI_PROTO((httpd *, char *, char *, int, int (*)(), char *));
+^
+libhttpd/httpd.h:159:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int httpdAddStaticContent __ANSI_PROTO((httpd *, char *, char *, int, int (*)(), char *));
+^
+libhttpd/httpd.h:160:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int httpdAddWildcardContent __ANSI_PROTO((httpd *, char *, int (*)(), char *));
+^
+libhttpd/httpd.h:161:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int httpdAddCWildcardContent __ANSI_PROTO((httpd *, char *, int (*)(), void (*)()));
+^
+libhttpd/httpd.h:162:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int httpdAddVariable __ANSI_PROTO((request *, const char *, const char *));
+^
+libhttpd/httpd.h:163:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int httpdSetVariableValue __ANSI_PROTO((request *, const char *, const char *));
+^
+libhttpd/httpd.h:164:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    request *httpdGetConnection __ANSI_PROTO((httpd *, struct timeval *));
+^
+libhttpd/httpd.h:165:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int httpdReadRequest __ANSI_PROTO((httpd *, request *));
+^
+libhttpd/httpd.h:166:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int httpdCheckAcl __ANSI_PROTO((httpd *, request *, httpAcl *));
+^
+libhttpd/httpd.h:167:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int httpdAuthenticate __ANSI_PROTO((request *, const char *));
+^
+libhttpd/httpd.h:168:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdForceAuthenticate __ANSI_PROTO((request *, const char *));
+^
+libhttpd/httpd.h:169:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int httpdSetErrorFunction __ANSI_PROTO((httpd *, int, void (*)()));
+^
+libhttpd/httpd.h:171:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    char *httpdRequestMethodName __ANSI_PROTO((request *));
+^
+libhttpd/httpd.h:172:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    char *httpdUrlEncode __ANSI_PROTO((const char *));
+^
+libhttpd/httpd.h:174:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdAddHeader __ANSI_PROTO((request *, const char *));
+^
+libhttpd/httpd.h:175:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdSetContentType __ANSI_PROTO((request *, const char *));
+^
+libhttpd/httpd.h:176:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdSetResponse __ANSI_PROTO((request *, const char *));
+^
+libhttpd/httpd.h:177:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdEndRequest __ANSI_PROTO((request *));
+^
+libhttpd/httpd.h:179:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    httpd *httpdCreate __ANSI_PROTO(());
+^
+libhttpd/httpd.h:180:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdFreeVariables __ANSI_PROTO((request *));
+^
+libhttpd/httpd.h:181:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdDumpVariables __ANSI_PROTO((request *));
+^
+libhttpd/httpd.h:182:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdOutput __ANSI_PROTO((request *, const char *));
+^
+libhttpd/httpd.h:183:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdPrintf __ANSI_PROTO((request *, const char *, ...));
+^
+libhttpd/httpd.h:184:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdProcessRequest __ANSI_PROTO((httpd *, request *));
+^
+libhttpd/httpd.h:185:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdSendHeaders __ANSI_PROTO((request *));
+^
+libhttpd/httpd.h:186:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdSendFile __ANSI_PROTO((httpd *, request *, const char *));
+^
+libhttpd/httpd.h:187:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdSetFileBase __ANSI_PROTO((httpd *, const char *));
+^
+libhttpd/httpd.h:188:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdSetCookie __ANSI_PROTO((request *, const char *, const char *));
+^
+libhttpd/httpd.h:190:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdSetErrorLog __ANSI_PROTO((httpd *, FILE *));
+^
+libhttpd/httpd.h:191:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdSetAccessLog __ANSI_PROTO((httpd *, FILE *));
+^
+libhttpd/httpd.h:192:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdSetDefaultAcl __ANSI_PROTO((httpd *, httpAcl *));
+^
+libhttpd/httpd.h:194:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    httpVar *httpdGetVariableByName __ANSI_PROTO((request *, const char *));
+^
+libhttpd/httpd.h:195:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    httpVar *httpdGetVariableByPrefix __ANSI_PROTO((request *, const char *));
+^
+libhttpd/httpd.h:196:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    httpVar *httpdGetVariableByPrefixedName __ANSI_PROTO((request *, const char *, const char *));
+^
+libhttpd/httpd.h:197:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    httpVar *httpdGetNextVariableByPrefix __ANSI_PROTO((httpVar *, const char *));
+^
+libhttpd/httpd.h:199:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    httpAcl *httpdAddAcl __ANSI_PROTO((httpd *, httpAcl *, char *, int));
+^
+libhttpd/httpd_priv.h:49:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    char *_httpd_unescape __ANSI_PROTO((char *));
+^
+libhttpd/httpd_priv.h:50:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    char *_httpd_escape __ANSI_PROTO((const char *));
+^
+libhttpd/httpd_priv.h:51:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    char _httpd_from_hex __ANSI_PROTO((char));
+^
+libhttpd/httpd_priv.h:53:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void _httpd_catFile __ANSI_PROTO((request *, const char *));
+^
+libhttpd/httpd_priv.h:54:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void _httpd_send403 __ANSI_PROTO((httpd *, request *));
+^
+libhttpd/httpd_priv.h:55:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void _httpd_send404 __ANSI_PROTO((httpd *, request *));
+^
+libhttpd/httpd_priv.h:56:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void _httpd_send304 __ANSI_PROTO((httpd *, request *));
+^
+libhttpd/httpd_priv.h:57:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void _httpd_sendText __ANSI_PROTO((request *, char *));
+^
+libhttpd/httpd_priv.h:58:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void _httpd_sendFile __ANSI_PROTO((httpd *, request *, char *));
+^
+libhttpd/httpd_priv.h:59:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void _httpd_sendStatic __ANSI_PROTO((httpd *, request *, char *));
+^
+libhttpd/httpd_priv.h:60:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void _httpd_sendHeaders __ANSI_PROTO((request *, int, int);
+^
+libhttpd/httpd_priv.h:62:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void _httpd_sanitiseUrl __ANSI_PROTO((char *));
+^
+libhttpd/httpd_priv.h:63:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void _httpd_freeVariables __ANSI_PROTO((httpVar *));
+^
+libhttpd/httpd_priv.h:64:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void _httpd_formatTimeString __ANSI_PROTO((char *, int));
+^
+libhttpd/httpd_priv.h:65:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void _httpd_storeData __ANSI_PROTO((request *, char *));
+^
+libhttpd/httpd_priv.h:66:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void _httpd_writeAccessLog __ANSI_PROTO((httpd *, request *));
+^
+libhttpd/httpd_priv.h:67:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void _httpd_writeErrorLog __ANSI_PROTO((httpd *, request *, char *, char *));
+^
+libhttpd/httpd_priv.h:69:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int _httpd_net_read __ANSI_PROTO((int, char *, int));
+^
+libhttpd/httpd_priv.h:70:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int _httpd_net_write __ANSI_PROTO((int, char *, int));
+^
+libhttpd/httpd_priv.h:71:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int _httpd_readBuf __ANSI_PROTO((request *, char *, int));
+^
+libhttpd/httpd_priv.h:72:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int _httpd_readChar __ANSI_PROTO((request *, char *));
+^
+libhttpd/httpd_priv.h:73:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int _httpd_readLine __ANSI_PROTO((request *, char *, int));
+^
+libhttpd/httpd_priv.h:74:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int _httpd_checkLastModified __ANSI_PROTO((request *, int));
+^
+libhttpd/httpd_priv.h:75:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int _httpd_sendDirectoryEntry __ANSI_PROTO((httpd *, request * r, httpContent *, char *));
+^
+libhttpd/httpd_priv.h:77:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    httpContent *_httpd_findContentEntry __ANSI_PROTO((request *, httpDir *, char *));
+^
+libhttpd/httpd_priv.h:78:0: information: Skipping configuration '_WIN32;__STDC__;__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    httpDir *_httpd_findContentDir __ANSI_PROTO((httpd *, char *, int));
+^
+libhttpd/httpd.h:157:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int httpdAddCContent __ANSI_PROTO((httpd *, char *, char *, int, int (*)(), void (*)()));
+^
+libhttpd/httpd.h:158:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int httpdAddFileContent __ANSI_PROTO((httpd *, char *, char *, int, int (*)(), char *));
+^
+libhttpd/httpd.h:159:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int httpdAddStaticContent __ANSI_PROTO((httpd *, char *, char *, int, int (*)(), char *));
+^
+libhttpd/httpd.h:160:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int httpdAddWildcardContent __ANSI_PROTO((httpd *, char *, int (*)(), char *));
+^
+libhttpd/httpd.h:161:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int httpdAddCWildcardContent __ANSI_PROTO((httpd *, char *, int (*)(), void (*)()));
+^
+libhttpd/httpd.h:162:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int httpdAddVariable __ANSI_PROTO((request *, const char *, const char *));
+^
+libhttpd/httpd.h:163:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int httpdSetVariableValue __ANSI_PROTO((request *, const char *, const char *));
+^
+libhttpd/httpd.h:164:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    request *httpdGetConnection __ANSI_PROTO((httpd *, struct timeval *));
+^
+libhttpd/httpd.h:165:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int httpdReadRequest __ANSI_PROTO((httpd *, request *));
+^
+libhttpd/httpd.h:166:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int httpdCheckAcl __ANSI_PROTO((httpd *, request *, httpAcl *));
+^
+libhttpd/httpd.h:167:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int httpdAuthenticate __ANSI_PROTO((request *, const char *));
+^
+libhttpd/httpd.h:168:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdForceAuthenticate __ANSI_PROTO((request *, const char *));
+^
+libhttpd/httpd.h:169:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int httpdSetErrorFunction __ANSI_PROTO((httpd *, int, void (*)()));
+^
+libhttpd/httpd.h:171:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    char *httpdRequestMethodName __ANSI_PROTO((request *));
+^
+libhttpd/httpd.h:172:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    char *httpdUrlEncode __ANSI_PROTO((const char *));
+^
+libhttpd/httpd.h:174:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdAddHeader __ANSI_PROTO((request *, const char *));
+^
+libhttpd/httpd.h:175:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdSetContentType __ANSI_PROTO((request *, const char *));
+^
+libhttpd/httpd.h:176:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdSetResponse __ANSI_PROTO((request *, const char *));
+^
+libhttpd/httpd.h:177:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdEndRequest __ANSI_PROTO((request *));
+^
+libhttpd/httpd.h:179:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    httpd *httpdCreate __ANSI_PROTO(());
+^
+libhttpd/httpd.h:180:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdFreeVariables __ANSI_PROTO((request *));
+^
+libhttpd/httpd.h:181:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdDumpVariables __ANSI_PROTO((request *));
+^
+libhttpd/httpd.h:182:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdOutput __ANSI_PROTO((request *, const char *));
+^
+libhttpd/httpd.h:183:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdPrintf __ANSI_PROTO((request *, const char *, ...));
+^
+libhttpd/httpd.h:184:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdProcessRequest __ANSI_PROTO((httpd *, request *));
+^
+libhttpd/httpd.h:185:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdSendHeaders __ANSI_PROTO((request *));
+^
+libhttpd/httpd.h:186:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdSendFile __ANSI_PROTO((httpd *, request *, const char *));
+^
+libhttpd/httpd.h:187:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdSetFileBase __ANSI_PROTO((httpd *, const char *));
+^
+libhttpd/httpd.h:188:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdSetCookie __ANSI_PROTO((request *, const char *, const char *));
+^
+libhttpd/httpd.h:190:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdSetErrorLog __ANSI_PROTO((httpd *, FILE *));
+^
+libhttpd/httpd.h:191:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdSetAccessLog __ANSI_PROTO((httpd *, FILE *));
+^
+libhttpd/httpd.h:192:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void httpdSetDefaultAcl __ANSI_PROTO((httpd *, httpAcl *));
+^
+libhttpd/httpd.h:194:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    httpVar *httpdGetVariableByName __ANSI_PROTO((request *, const char *));
+^
+libhttpd/httpd.h:195:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    httpVar *httpdGetVariableByPrefix __ANSI_PROTO((request *, const char *));
+^
+libhttpd/httpd.h:196:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    httpVar *httpdGetVariableByPrefixedName __ANSI_PROTO((request *, const char *, const char *));
+^
+libhttpd/httpd.h:197:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    httpVar *httpdGetNextVariableByPrefix __ANSI_PROTO((httpVar *, const char *));
+^
+libhttpd/httpd.h:199:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    httpAcl *httpdAddAcl __ANSI_PROTO((httpd *, httpAcl *, char *, int));
+^
+libhttpd/httpd_priv.h:49:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    char *_httpd_unescape __ANSI_PROTO((char *));
+^
+libhttpd/httpd_priv.h:50:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    char *_httpd_escape __ANSI_PROTO((const char *));
+^
+libhttpd/httpd_priv.h:51:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    char _httpd_from_hex __ANSI_PROTO((char));
+^
+libhttpd/httpd_priv.h:53:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void _httpd_catFile __ANSI_PROTO((request *, const char *));
+^
+libhttpd/httpd_priv.h:54:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void _httpd_send403 __ANSI_PROTO((httpd *, request *));
+^
+libhttpd/httpd_priv.h:55:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void _httpd_send404 __ANSI_PROTO((httpd *, request *));
+^
+libhttpd/httpd_priv.h:56:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void _httpd_send304 __ANSI_PROTO((httpd *, request *));
+^
+libhttpd/httpd_priv.h:57:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void _httpd_sendText __ANSI_PROTO((request *, char *));
+^
+libhttpd/httpd_priv.h:58:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void _httpd_sendFile __ANSI_PROTO((httpd *, request *, char *));
+^
+libhttpd/httpd_priv.h:59:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void _httpd_sendStatic __ANSI_PROTO((httpd *, request *, char *));
+^
+libhttpd/httpd_priv.h:60:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void _httpd_sendHeaders __ANSI_PROTO((request *, int, int);
+^
+libhttpd/httpd_priv.h:62:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void _httpd_sanitiseUrl __ANSI_PROTO((char *));
+^
+libhttpd/httpd_priv.h:63:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void _httpd_freeVariables __ANSI_PROTO((httpVar *));
+^
+libhttpd/httpd_priv.h:64:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void _httpd_formatTimeString __ANSI_PROTO((char *, int));
+^
+libhttpd/httpd_priv.h:65:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void _httpd_storeData __ANSI_PROTO((request *, char *));
+^
+libhttpd/httpd_priv.h:66:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void _httpd_writeAccessLog __ANSI_PROTO((httpd *, request *));
+^
+libhttpd/httpd_priv.h:67:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    void _httpd_writeErrorLog __ANSI_PROTO((httpd *, request *, char *, char *));
+^
+libhttpd/httpd_priv.h:69:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int _httpd_net_read __ANSI_PROTO((int, char *, int));
+^
+libhttpd/httpd_priv.h:70:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int _httpd_net_write __ANSI_PROTO((int, char *, int));
+^
+libhttpd/httpd_priv.h:71:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int _httpd_readBuf __ANSI_PROTO((request *, char *, int));
+^
+libhttpd/httpd_priv.h:72:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int _httpd_readChar __ANSI_PROTO((request *, char *));
+^
+libhttpd/httpd_priv.h:73:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int _httpd_readLine __ANSI_PROTO((request *, char *, int));
+^
+libhttpd/httpd_priv.h:74:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int _httpd_checkLastModified __ANSI_PROTO((request *, int));
+^
+libhttpd/httpd_priv.h:75:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    int _httpd_sendDirectoryEntry __ANSI_PROTO((httpd *, request * r, httpContent *, char *));
+^
+libhttpd/httpd_priv.h:77:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    httpContent *_httpd_findContentEntry __ANSI_PROTO((request *, httpDir *, char *));
+^
+libhttpd/httpd_priv.h:78:0: information: Skipping configuration '__ANSI_PROTO' since the value of '__ANSI_PROTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    httpDir *_httpd_findContentDir __ANSI_PROTO((httpd *, char *, int));
+^
+libhttpd/protocol.c:232:11: style: Redundant initialization for 'bufin'. The initialized value is overwritten before it is read. [redundantInitialization]
+    bufin = bufcoded;
+          ^
+libhttpd/protocol.c:206:26: note: bufin is initialized
+    register char *bufin = bufcoded;
+                         ^
+libhttpd/protocol.c:232:11: note: bufin is overwritten
+    bufin = bufcoded;
+          ^
+libhttpd/protocol.c:189:17: style: The scope of the variable 'six2pr' can be reduced. [variableScope]
+    static char six2pr[64] = {
+                ^
+libhttpd/protocol.c:205:24: style: The scope of the variable 'j' can be reduced. [variableScope]
+    int nbytesdecoded, j;
+                       ^
+libhttpd/protocol.c:300:23: style: The scope of the variable 'lastVar' can be reduced. [variableScope]
+    httpVar *curVar, *lastVar;
+                      ^
+libhttpd/protocol.c:388:10: style: The scope of the variable 'tmpBuf' can be reduced. [variableScope]
+    char tmpBuf[80], timeBuf[HTTP_TIME_STRING_LEN];
+         ^
+src/commandline.c:86:9: style: The scope of the variable 'skiponrestart' can be reduced. [variableScope]
+    int skiponrestart;
+        ^
+src/conf.c:226:27: style: Condition 'config.daemon>0' is always true [knownConditionTrueFalse]
+        if (config.daemon > 0) {
+                          ^
+src/conf.c:225:25: note: Assignment 'config.daemon=1', assigned value is 1
+        config.daemon = DEFAULT_DAEMON;
+                        ^
+src/conf.c:226:27: note: Condition 'config.daemon>0' is always true
+        if (config.daemon > 0) {
+                          ^
+src/conf.c:436:31: style: The scope of the variable 'p2' can be reduced. [variableScope]
+    char line[MAX_BUF], *p1, *p2;
+                              ^
+src/conf.c:503:9: style: The scope of the variable 'all_nums' can be reduced. [variableScope]
+    int all_nums = 1;     /**< If 0, port contained non-numerics */
+        ^
+src/conf.c:512:25: style: The scope of the variable 'tmpr2' can be reduced. [variableScope]
+    t_firewall_ruleset *tmpr2;
+                        ^
+src/conf.c:182:0: information: Skipping configuration 'SYSCONFDIR' since the value of 'SYSCONFDIR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    config.configfile = safe_strdup(DEFAULT_CONFIGFILE);
+^
+src/conf.c:183:0: information: Skipping configuration 'SYSCONFDIR' since the value of 'SYSCONFDIR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    config.htmlmsgfile = safe_strdup(DEFAULT_HTMLMSGFILE);
+^
+src/debug.c:49:10: style: The scope of the variable 'buf' can be reduced. [variableScope]
+    char buf[28];
+         ^
+src/debug.c:50:13: style: The scope of the variable 'vlist' can be reduced. [variableScope]
+    va_list vlist;
+            ^
+src/firewall.c:196:9: style: The scope of the variable 'new_fw_state' can be reduced. [variableScope]
+    int new_fw_state;
+        ^
+src/fw_iptables.c:208:11: style: The scope of the variable 'cmd' can be reduced. [variableScope]
+    char *cmd;
+          ^
+src/fw_iptables.c:511:10: style: The scope of the variable 'line' can be reduced. [variableScope]
+    char line[MAX_BUF];
+         ^
+src/fw_iptables.c:512:10: style: The scope of the variable 'rulenum' can be reduced. [variableScope]
+    char rulenum[10];
+         ^
+src/fw_iptables.c:659:31: warning: Storing fscanf() return value in char variable and then comparing with EOF. [checkCastIntToCharAndBack]
+        if (2 == rc && EOF != rc) {
+                              ^
+src/fw_iptables.c:704:31: warning: Storing fscanf() return value in char variable and then comparing with EOF. [checkCastIntToCharAndBack]
+        if (2 == rc && EOF != rc) {
+                              ^
+src/gateway.c:374:10: warning: Either the condition 'config' is redundant or there is possible null pointer dereference: config. [nullPointerRedundantCheck]
+    if (!config->gw_address) {
+         ^
+src/gateway.c:370:9: note: Assuming that condition 'config' is not redundant
+    if (config && config->pidfile)
+        ^
+src/gateway.c:374:10: note: Null pointer dereference
+    if (!config->gw_address) {
+         ^
+src/gateway.c:385:10: warning: Either the condition 'config' is redundant or there is possible null pointer dereference: config. [nullPointerRedundantCheck]
+    if (!config->gw_id) {
+         ^
+src/gateway.c:370:9: note: Assuming that condition 'config' is not redundant
+    if (config && config->pidfile)
+        ^
+src/gateway.c:385:10: note: Null pointer dereference
+    if (!config->gw_id) {
+         ^
+src/gateway.c:395:5: warning: Either the condition 'config' is redundant or there is possible null pointer dereference: config. [nullPointerRedundantCheck]
+    debug(LOG_NOTICE, "Creating web server on %s:%d", config->gw_address, config->gw_port);
+    ^
+src/gateway.c:370:9: note: Assuming that condition 'config' is not redundant
+    if (config && config->pidfile)
+        ^
+src/gateway.c:395:5: note: Null pointer dereference
+    debug(LOG_NOTICE, "Creating web server on %s:%d", config->gw_address, config->gw_port);
+    ^
+src/gateway.c:396:34: warning: Either the condition 'config' is redundant or there is possible null pointer dereference: config. [nullPointerRedundantCheck]
+    if ((webserver = httpdCreate(config->gw_address, config->gw_port)) == NULL) {
+                                 ^
+src/gateway.c:370:9: note: Assuming that condition 'config' is not redundant
+    if (config && config->pidfile)
+        ^
+src/gateway.c:396:34: note: Null pointer dereference
+    if ((webserver = httpdCreate(config->gw_address, config->gw_port)) == NULL) {
+                                 ^
+src/http.c:255:15: style: The scope of the variable 'client' can be reduced. [variableScope]
+    t_client *client;
+              ^
+src/http.c:257:11: style: The scope of the variable 'mac' can be reduced. [variableScope]
+    char *mac;
+          ^
+src/util.c:347:46: warning: The address of local variable 'icmp' might be accessed at non-zero index. [objectIndex]
+        j += ((unsigned short *)&packet.icmp)[i];
+                                             ^
+src/util.c:347:33: note: Address of variable taken here.
+        j += ((unsigned short *)&packet.icmp)[i];
+                                ^
+src/util.c:347:46: note: The address of local variable 'icmp' might be accessed at non-zero index.
+        j += ((unsigned short *)&packet.icmp)[i];
+                                             ^
+src/util.c:286:5: style: Statements following return, break, continue, goto or throw will never be executed. [unreachableCode]
+    free(device);
+    ^
+src/util.c:237:11: style: The scope of the variable 'input' can be reduced. [variableScope]
+    FILE *input;
+          ^
+src/util.c:194:59: portability: '(void*)&if_data.ifr_addr.sa_data' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+    memcpy((void *)&ip, (void *)&if_data.ifr_addr.sa_data + 2, 4);
+                                                          ^
+src/wdctl.c:174:13: style: The scope of the variable 'written' can be reduced. [variableScope]
+    ssize_t written;
+            ^
+src/wdctl_thread.c:122:10: style: The scope of the variable 'fd' can be reduced. [variableScope]
+    int *fd;
+         ^
+src/wdctl_thread.c:166:13: style: The scope of the variable 'len' can be reduced. [variableScope]
+    ssize_t len;
+            ^
+src/wdctl_thread.c:225:13: style: The scope of the variable 'retval' can be reduced. [variableScope]
+    ssize_t retval;
+            ^
+src/wdctl_thread.c:269:15: style: The scope of the variable 'fd' can be reduced. [variableScope]
+    int sock, fd;
+              ^
+libhttpd/protocol.c:129:0: style: The function '_httpd_readBuf' is never used. [unusedFunction]
+
+^
+src/client_list.c:291:0: style: The function 'client_list_find_by_token' is never used. [unusedFunction]
+
+^
+src/conf.c:222:0: style: The function 'config_init_override' is never used. [unusedFunction]
+
+^
+libhttpd/ip_acl.c:118:0: style: The function 'httpdAddAcl' is never used. [unusedFunction]
+
+^
+libhttpd/api.c:875:0: style: The function 'httpdAuthenticate' is never used. [unusedFunction]
+
+^
+libhttpd/api.c:293:0: style: The function 'httpdDestroy' is never used. [unusedFunction]
+
+^
+libhttpd/api.c:507:0: style: The function 'httpdDumpVariables' is never used. [unusedFunction]
+
+^
+libhttpd/api.c:501:0: style: The function 'httpdFreeVariables' is never used. [unusedFunction]
+
+^
+libhttpd/api.c:149:0: style: The function 'httpdGetNextVariableByPrefix' is never used. [unusedFunction]
+
+^
+libhttpd/api.c:98:0: style: The function 'httpdGetVariableByPrefix' is never used. [unusedFunction]
+
+^
+libhttpd/api.c:130:0: style: The function 'httpdGetVariableByPrefixedName' is never used. [unusedFunction]
+
+^
+libhttpd/api.c:772:0: style: The function 'httpdPrintf' is never used. [unusedFunction]
+
+^
+libhttpd/api.c:859:0: style: The function 'httpdSetAccessLog' is never used. [unusedFunction]
+
+^
+libhttpd/api.c:690:0: style: The function 'httpdSetContentType' is never used. [unusedFunction]
+
+^
+libhttpd/api.c:709:0: style: The function 'httpdSetCookie' is never used. [unusedFunction]
+
+^
+libhttpd/ip_acl.c:194:0: style: The function 'httpdSetDefaultAcl' is never used. [unusedFunction]
+
+^
+libhttpd/api.c:867:0: style: The function 'httpdSetErrorLog' is never used. [unusedFunction]
+
+^
+libhttpd/api.c:524:0: style: The function 'httpdSetFileBase' is never used. [unusedFunction]
+
+^
+libhttpd/api.c:114:0: style: The function 'httpdSetVariableValue' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
